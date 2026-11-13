@@ -6,10 +6,10 @@
 #include "JSONS.h"
 
 // Credenciales estáticas de red y broker
-const char* ssid = "Honor 200";
-const char* password = "Laui361q";
+const char* ssid = "";
+const char* password = "";
 const char* mqtt_server = "broker.hivemq.com";
-const char* topico_mqtt = "20206826_Alexis"; 
+const char* topico_mqtt = ""; 
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -33,7 +33,7 @@ class TareaMQTT : public TareaTemporizada {
      */
     void reconectar() {
       if (!client.connected() && WiFi.status() == WL_CONNECTED) {
-        client.connect("ESP32_20206826_Alexis");
+        client.connect("");
       }
     }
     
